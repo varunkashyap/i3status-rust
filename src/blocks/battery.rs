@@ -640,7 +640,7 @@ impl Block for Battery {
             // Otherwise, adjust the state depeding the power percentance.
             match status.as_str() {
                 "Charging" => {
-                    self.output.set_state(State::Good);
+                    self.output.set_state(State::Idle);
                 }
                 _ => {
                     self.output.set_state(match capacity {
